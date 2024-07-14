@@ -7,10 +7,12 @@ The AzureStorage connector provides a Job Sub-Type that can be used to simplify 
 
 ![jobsubtype](../static/img/azure_storage_subtype.png)
 
-When using the Job Sub-Type, fill in the Account name and the Access Key associated with the Storage Account (an encrypted global property should be used to store the access key).
+When using the Job Sub-Type, fill in the Account name and the Access Key associated with the Storage Account. The key value is the Connection String value that can be found in the Access keys section of the storage account (encrypted global property should be used to store the access key).
 
 Select the Task from the drop-down list and enter the required values. Only values associated with the task will be enabled. Once a task has been saved, the task type cannot be changed.
 When uploading or downloading files and specific source and target filenames are entered, wild cards are not supported.
+
+When using the List commands a value must be specified and an (*) will display all containers and and all.
 
 ## AzureStorage Arguments
 The AzureStorage connector requires arguments to be given to function. It uses the principle of Tasks, where each task performs an action or a combination of actions against Azure Storage.
@@ -20,7 +22,7 @@ Arguments | Description
 --------- | -----------
 **-sa**  | (Mandatory) The name of the Azure Storage account to perform the task on.
 **-t**   | (Mandatory) The task to perform.
-**-k**   | (Mandatory) The Access Key associated with the Storage Account
+**-k**   | (Mandatory) The Access Key associated with the Storage . he key value is the Connection String value that can be found in the Access keys section of the storage account.
 
 ### containercreate
 Can be used to create a new container within the storage account.
