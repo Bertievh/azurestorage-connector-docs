@@ -1,11 +1,11 @@
-# Operation
+# Enterprise Manager Operation
 
 The connector can be used by entering arguments on the command line or using the job sub-type.
 
 ## AzureStorage Job Sub-Type
 The AzureStorage connector provides a Job Sub-Type that can be used to simplify job definitions within OpCon.
 
-![jobsubtype](/docs/images/azure_storage_subtype.png)
+![jobsubtype](../static/img/azure_storage_subtype.png)
 
 When using the Job Sub-Type, fill in the Account name and the Access Key associated with the Storage Account. The key value is the Connection String value that can be found in the Access keys section of the storage account (encrypted global property should be used to store the access key).
 
