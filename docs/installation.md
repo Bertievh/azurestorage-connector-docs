@@ -108,7 +108,6 @@ NAME=Azure Storage Connector
 DEBUG=ON
 
 [STORAGE ACCOUNTS]
-STORAGE=<storage account entry>
 
 ```
 
@@ -141,14 +140,7 @@ The connector reads its configuration from the `Connector.config` file in the in
 |---|---|---|---|
 | `NAME` | Display name for the connector instance | None | Informational only. The connector does not read this value |
 | `DEBUG` | Enables detailed debug logging | `OFF` | Set to `ON` to write verbose log output for troubleshooting |
-| `[STORAGE ACCOUNTS]` | Section header | — | Present in the supplied `Connector.config`. See note below |
-| `STORAGE` | Named storage account entry | None | Present in the supplied `Connector.config`. See note below |
-
-:::info Note
-
-The supplied `Connector.config` also contains a `[STORAGE ACCOUNTS]` section with a `STORAGE` entry. The storage account name and access key used by a job are supplied per job, through the **Account Name** and **Access Key** fields or the `-sa` and `-k` arguments — not through this file. Leave the section as supplied unless your component owner directs otherwise.
-
-:::
+| `[STORAGE ACCOUNTS]` | Section header | — | Present in the supplied `Connector.config`. No information required as this has been moved to the job definition |
 
 **Connector.config example:**
 
@@ -158,7 +150,7 @@ NAME=Azure Storage Connector
 DEBUG=OFF
 
 [STORAGE ACCOUNTS]
-STORAGE=<storage account entry>
+
 ```
 
 ## Exception handling
